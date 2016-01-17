@@ -1,0 +1,2755 @@
+/*
+Theme Name: cyrill
+Theme URI: 
+Description: 
+Author:
+Author URI: 
+Version: 
+Template:
+*/
+
+@charset "UTF-8";
+
+/* Reset */
+body{
+  margin:0;
+  padding:0;
+  text-align:left;
+  font-family: 'Oswald', sans-serif;
+  color:#333;
+  letter-spacing:0.4px;
+}
+.newst{
+   width: 193px;
+  height: 30px;
+  margin-bottom: 50px;
+  /*background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/title_biography.png);
+  background-repeat: no-repeat;
+  text-indent: -9999px;*/
+  color: #fff;
+  font-size: 35px;
+  margin-left: 50px;
+  margin-top: 100px;
+}
+.newstii{
+    width: 2000px;
+  height: 0px;
+  margin-bottom: 50px;
+  /*background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/title_biography.png);
+  background-repeat: no-repeat;
+  text-indent: -9999px;*/
+  color: #fff;
+  font-size: 20px;
+  margin-left: 50px;
+}
+.newsti{
+  margin-top: 10px;
+  width: 2000px;
+  height: 30px;
+  margin-bottom: 5px;
+  /*background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/title_biography.png);
+  background-repeat: no-repeat;
+  text-indent: -9999px;*/
+  color: #fff;
+  font-size: 20px;
+  margin-left: 50px;
+}
+dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,input,p,blockquote,fieldset,div{
+  margin:0;
+  padding:0;
+}
+h1,h2,h3,h4,h5,h6{
+  font-size:100%;
+  font-weight:normal;
+}
+ul li, ol li{
+  list-style:none;
+}
+table{
+  margin:0;
+  padding:0;
+  border-collapse:collapse;
+  border-spacing:0;
+  font-size:100%;
+}
+caption{
+  text-align:left;
+}
+table,pre,code,select,input,textarea,kbd,var,ins,del,samp{
+  font-size:100%;
+}
+address,cite,dfn,em,strong,var,th,ins,del,samp{
+  font-weight:normal;font-style:normal;
+}
+a img{
+  border:0;
+}
+hr.cmnSeparation{
+  display:none;
+}
+fieldset{
+  border:none;
+}
+.clfix{*zoom:1;}.clfix:after{content:"";display:block;clear:both;}
+
+html,
+body{
+  height: 100%;
+}
+#wrapper{
+  position:r elative;
+  min-height: 100%;
+  text-align: left;
+  font-size: medium;
+  line-height: 1.56;
+  background-color: #000;
+}
+#wrapper.typeGray{
+  background-color: #141414;
+}
+#contents {
+  width: 100%;
+  min-width: 960px;
+  /*min-width: 1280px;*/
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cmnConWr {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.subMenu {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 70px;
+}
+.gNavi {
+  position: relative;
+  width: 100%;
+  height: 70px;
+  min-width: 960px;
+  overflow: hidden;
+  background-color: #000;
+}
+.gNavi a {
+  color: #fff;
+  text-decoration: none;
+}
+.gNavi li {
+  display: inline;
+  float: left;
+}
+.gNavi-language {
+ /* display: inline;
+  float: left;*/
+  width: 150px;
+  /*margin: 20px;*/
+  font-size: 12px;
+  display: inline-block;
+  margin: 29px 0;
+  line-height: 1;
+}
+.gNavi-language li {
+  margin-right: 15px;
+  padding-right: 0;
+  /*background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/bg_line.png);*/
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+.gNavi-language li a {
+  color: #343434;
+  opacity:0.3;
+}
+.gNavi-language li.typeLast {
+  background-image: none;
+}
+.gNavi-language li.typeCurrent a {
+  color: #fff;
+  opacity:1;
+}
+.gNavi-logo{
+  height: 70px;	
+  width: 70px;
+  background-position: center center;
+  background-image: url();
+  margin-right: 10px;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+.gNavi-main {
+  width: 680px;
+  margin: 28px 0 27px;
+  font-size: 15px;
+  display: inline-block;
+  line-height: 1;
+}
+.gNavi-main li {
+  margin-right: 20px;
+  padding-right: 20px;
+  background-image: url();
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+.gNavi-main li.gNavi-main-top {
+  display: none;
+}
+.gNavi-main li.typeLast {
+  background-image: none;
+}
+a.active {
+  /*color: #ffd200;*/
+}
+
+.gNavi-share {
+  /*display: inline;
+  float: right;*/
+  position: absolute;
+  right: 20px;
+  top: 25px;
+  width: 170px;
+  
+ }
+.gNavi-share li {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+}
+.gNavi-share-twitter {
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/ic_twitter.png);
+}
+
+.gNavi-share-facebook {
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/ic_facebook.png);
+}
+
+.gNavi-share-weibo {
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/ic_weibo.png);
+}
+.gNavi-share-instagram {
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/ic_instagram.png);
+}
+.gNavi-share-tumblr {
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/ic_tumblr.png);
+}
+.gNavi-share-youtube {
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/ic_youtube.png);
+}
+.gNavi-share li.gNavi-share-youtube {
+  width: 40px;
+}
+
+/* top */
+.mdTop {
+  /*background-color: #aeaeae;
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/bg_top.jpg);
+  background-repeat: no-repeat;
+  background-position: right center;*/
+background-color: #1c151d;
+  background-image: url(../DSC_0112.jpg);
+  background-repeat: no-repeat;
+  background-position: middle;
+  background-size: cover;
+  /*min-height:800px;
+  min-width: 960px;*/
+  position: relative;
+
+    /*min-height: 900px;
+  background-color: #000;
+  background-image: url(../DSC_0101.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-position: right top;
+  background-attachment: fixed;*/
+}
+.mdTop-inner {
+  position: relative;
+  width: 100%;
+  background-image: url();
+}
+.mdTop-opening {
+  position: absolute;
+  right: 0;
+  top: 220px;
+  width: 400px;
+  text-align: center;
+}
+.mdTop-opening-movie {
+  margin-bottom: 30px;
+}
+.mdTop-topics{
+  position: absolute;
+  bottom:70px;
+  left:0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+.mdTop-topics a {
+  display: block;
+  text-decoration: none;
+}
+.mdTop-topics-title{
+    background-image: url("");
+    background-repeat: no-repeat;
+    height: 40px;
+    text-indent: -9999px;
+    width: 58px;
+    display: inline-block;
+    background-position: center center;
+    margin-right: 20px;
+    vertical-align: middle;
+    margin-left: 15px;
+	float:left;
+}
+
+.topTicker {
+    float: left;
+    margin-top: -5px;
+}
+.mdTop-topics-contents-date{
+color: #FFD200;
+    display: inline-block;
+    font-size: 12px;
+    margin-right: 20px;
+    line-height: 1;
+	vertical-align: middle;
+}
+.mdTop-topics-contents-title{
+	font-size: 14px;
+	line-height: 1;
+	vertical-align: middle;
+	color: #fff;
+	font-family:'ƒqƒ‰ƒMƒmŠpƒS Pro W3','Hiragino Kaku Gothic Pro',sans-serif;
+}
+
+.topBnr {
+    bottom: 110px;
+    left: 25px;
+    position: absolute;
+}
+
+.topBnr li {
+    float: left;
+    margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+.topBnr li a:hover{
+    opacity:0.6;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+/* biography */
+.mdBiography {
+  /*background-color: #1c151d;
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/bg_movie.jpg);
+  background-repeat: no-repeat;
+  background-position: left top;*/
+background-color: #aeaeae;
+  background-image: url(../DSC_0089.jpg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  min-height: 1000px;
+  /* background-position: right bottom;*/
+  background-attachment: fixed;
+  background-size: cover;
+}
+.mdBiography-inner {
+  position: relative;
+  width: 100%;
+  min-height: 833px;
+  background-image: url()
+}
+.mdBiography-info {
+  position: absolute;
+  top: 160px;
+  left: 0;
+  width: 500px;
+  color: #fff;
+}
+.mdBiography-title {
+  width: 193px;
+  height: 30px;
+  margin-bottom: 50px;
+  /*background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/title_biography.png);
+  background-repeat: no-repeat;
+  text-indent: -9999px;*/
+  color: #fff;
+  font-size: 35px;
+}
+.mdBiography-cyril-title {
+  /*width: 108px;
+  height: 25px;
+  margin-bottom: 20px;
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/title_cyril.png);
+  background-repeat: no-repeat;
+  text-indent: -9999px;*/
+  margin-bottom: 20px;
+}
+.mdBiography-cyril-title-en {
+  margin-right: 10px;
+  font-size: 24px;
+  letter-spacing: 0.1em;
+}
+.mdBiography-cyril-title-native {
+  font-size: 16px;
+}
+.mdBiography-text {
+  margin-bottom: 50px;
+  font-size: 14px;
+  line-height:1.6;
+  font-family:'ƒqƒ‰ƒMƒmŠpƒS Pro W3','Hiragino Kaku Gothic Pro',sans-serif;
+}
+/*.btn-next {
+  width: 115px;
+  height: 31px;
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/btn_next.png);
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+}
+.btn-next a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}*/
+
+
+/* slide */
+.slideShow{
+  width: 500px;
+  overflow: hidden;
+  height: 300px;
+  position: relative;
+  margin-bottom:40px;
+}
+.slideShow-inner{
+}
+.slideShow-slide{
+  display: block;
+  float: left;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.slideArea {
+    float: left;
+    height: 718px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.slideArea .slideTtl {
+    background-color: #000000;
+    color: #FFFFFF;
+    float: left;
+    padding: 2px 10px;
+}
+
+.slideShow-nav {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 210px;
+  left: 0;
+}
+.slideShow-nav-prevBtn {
+  display: inline;
+  float: left;
+  width: 115px;
+  height: 31px;
+  background-image: url(./img/btn_prev.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  -moz-background-size: contain;
+  -webkit-background-size: contain;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.slideShow-nav-prevBtn:hover {
+  opacity:0.6;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.slideShow-nav-nextBtn {
+  display: inline;
+  float: right;
+  width: 115px;
+  height: 31px;
+  background-image: url(./img/btn_next.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  -moz-background-size: contain;
+  -webkit-background-size: contain;
+  text-indent: -9999px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.slideShow-nav-nextBtn:hover {
+  opacity:0.6;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.slideShow-nav-prevBtn.typeDisable {
+  background-image: url(./img/btn_prev_disable.png);
+}
+.slideShow-nav-prevBtn.typeDisable:hover {
+  opacity:1;
+}
+.slideShow-nav-nextBtn.typeDisable {
+  background-image: url(./img/btn_next_disable.png);
+}
+.slideShow-nav-nextBtn.typeDisable:hover {
+  opacity:1;
+}
+
+
+/* news */
+.mdNews {
+  min-height: 900px;
+  background-color: #000;
+  background-image: url("../DSC_0105.jpg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.mdNews.typeBgNone {
+  background-image: none;
+  background-color: #1e1e1e;
+}
+.mdNews-inner {
+  position: relative;
+  width: 100%;
+  min-height: 900px;
+ //background-image: url("pexels-photo.jpg");
+ background-size: 1366px 600px;
+  overflow: hidden;
+}
+/*.mdNews-contents {
+  /*position: absolute;
+  top: 160px;
+  left: 140px;*/
+  width: 960px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mdNews-title {
+  width: 95px;
+  height: 30px;
+  margin-bottom: 40px;
+  /*background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/title_news.png);
+  background-repeat: no-repeat;
+  text-indent: -9999px;*/
+  float: left;
+  color: #fff;
+  font-size: 35px;
+}
+.mdNews-newsListWr {
+  margin-bottom: 0;
+  float:left;
+  clear:left;
+}
+.mdNews-newsList {
+  position: relative;
+  display: inline;
+  float: left;
+  width: 220px;
+  min-height: 290px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  background-color: #141414;
+  color: #fff;
+  overflow: hidden;
+}
+.mdNews-newsList a {
+  display: block;
+  min-height: 290px;
+  color: #fff;
+  text-decoration: none;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.mdNews-newsList:hover {
+  background-color: #272727;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.mdNews-newsList-date {
+   display: block;
+ margin: 0 10px 10px;
+  color: #ffd200;
+  font-size: 10px;
+}
+.mdNews-newsList-thumbnail {
+  display: block;
+  margin: 10px 10px 10px;
+  height: 140px;
+  background-size:cover;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+}
+.mdNews-newsList-title {
+  display: block;
+  margin: 0 10px 10px;
+  font-size: 12px;
+  font-family:'ƒqƒ‰ƒMƒmŠpƒS Pro W3','Hiragino Kaku Gothic Pro',sans-serif;
+}
+.mdNews-newsList-text {
+  display: block;
+  margin: 0 10px 20px;
+  font-size: 13px;
+  font-family:'ƒqƒ‰ƒMƒmŠpƒS Pro W3','Hiragino Kaku Gothic Pro',sans-serif;
+}
+.mdNews-newsList-more {
+  display: block;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  font-size: 12px;
+}
+.mdNews-newsList-more a {
+  color: #fff;
+  text-decoration: none;
+}
+.btn-viewall {
+    float: right;
+    height: 40px;
+    margin-right: 20px;
+    margin-top: -5px;
+    width: 185px;
+}
+.btn-viewall a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/btn_viewall.png);
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.btn-viewall a:hover {
+  opacity:0.6;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.recentNewsTtl {
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 14px;
+}
+*/
+
+.pageClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 45px;
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/ic_close.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  text-indent: -9999px;
+}
+.pageClose a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.detailHd {
+  width: 960px;
+  margin: 60px auto;
+}
+.detailHd-logo {
+  display: inline;
+  float: left;
+  width: 132px;
+}
+.detailHd-title {
+  display: inline;
+  float: right;
+  width: 60px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.news-main {
+  display: inline;
+  float: left;
+  width: 680px;
+}
+.news-sub {
+  display: inline;
+  float: right;
+  width: 220px;
+}
+.article {
+  margin-bottom: 50px;
+}
+.article-title {
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #383838;
+  color: #fff;
+  font-size: 18px;
+  font-family:'ƒqƒ‰ƒMƒmŠpƒS Pro W3','Hiragino Kaku Gothic Pro',sans-serif;
+}
+.article-date {
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #ffd200;
+}
+.article-text {
+  font-size: 14px;
+  color: #fff;
+  font-family:'ƒqƒ‰ƒMƒmŠpƒS Pro W3','Hiragino Kaku Gothic Pro',sans-serif;
+}
+.btn-BackToArchive {
+    float: left;
+    height: 40px;
+    width: 165px;
+    margin-bottom: 60px;
+}
+.btn-BackToArchive a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/btn_back.png");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.btn-BackToArchive a:hover {
+  opacity:0.6;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.btn-BackToArchiveh {
+    float: left;
+    height: 40px;
+    margin-left: 15px;
+    width: 165px;
+}
+.btn-BackToArchiveh a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/btn_back_h.png");
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.btn-BackToArchiveh a:hover {
+  opacity:0.6;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.archiveWr {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.archiveWr .mdNews-newsList {
+  background-color: #000;
+}
+
+
+
+
+/* movie */
+.mdMovie {
+  min-height: 800px;
+  /*background-color: #1c151d;
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/bg_movie.jpg);
+  background-repeat: no-repeat;
+  background-position: left top;*/
+background-color: #aeaeae;
+  background-image: url(../DSC_0089.jpg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  min-height: 1000px;
+  /* background-position: right bottom;*/
+  background-attachment: fixed;
+  background-size: cover;
+}
+.mdMovie.typeBgNone {
+  background-image: none;
+  background-color: #1e1e1e;
+}
+.mdMovie-inner {
+  position: relative;
+  width: 100%;
+  min-height: 800px;
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/bg_border.png);
+  overflow: hidden;
+}
+.mdMovie-contents {
+  /*position: absolute;
+  top: 160px;
+  left: 140px;*/
+  width: 960px;
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mdMovie-title {
+  width: 100px;
+  height: 30px;
+  margin-bottom: 40px;
+  /*background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/title_movie.png);
+  background-repeat: no-repeat;
+  text-indent: -9999px;*/
+  float:left;
+  color: #fff;
+  font-size: 35px;
+}
+.mdMovie-newsListWr {
+  margin-bottom: 20px;
+  float:left;
+}
+.mdMovie-newsListWr ul {
+  overflow: hidden;
+}
+.mdMovie-newsListWr li {
+  float: left;
+  width: 300px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+
+.mdMovie-newsList {
+  display: inline;
+  float: left;
+  width: 300px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.mdMovie-newsList-movie {
+  margin-bottom: 10px;
+}
+.mdMovie-newsList-link a {
+  color: #fff;
+  font-size: 12px;
+}
+
+
+/* twitter */
+.mdTwitter {
+  min-height: 900px;
+  background-color: #000;
+  background-image: url(../DSC_0034.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-position: right top;
+  background-attachment: fixed;
+}
+.mdTwitter-inner {
+  position: relative;
+  width: 100%;
+  min-height: 900px;
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/bg_border.png);
+  overflow: hidden;
+}
+#twitter-widget-container {
+  width: 940px;
+  height:800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mdTwitter-contents {
+  /*position: absolute;
+  top: 120px;
+  left: 140px;*/
+  width: 960px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mdTwitter-title {
+  width: 188px;
+  height: 30px;
+  margin-bottom: 40px;
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/title_twitter.png);
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  float: left;
+}
+.btn-follow {
+    float: right;
+    height: 40px;
+    margin-right: 0px;
+    margin-top: -5px;
+    width: 185px;
+}
+.btn-follow a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../follow_us.png);
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+.btn-follow a:hover {
+  opacity:0.6;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.twitter-timeline.twitter-timeline-rendered {
+    width: 100% !important;
+}
+/*.h-feed {
+  overflow: hidden;
+}
+*/
+
+/* instagram */
+.mdInstagram {
+  min-height: 900px;
+  background-color: #000;
+  background-image: url(../DSC_0108.jpg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.mdInstagram-inner {
+  position: relative;
+  width: 100%;
+  min-height: 900px;
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/bg_border.png);
+  overflow: hidden;
+}
+.mdInstagram-contents {
+  /*position: absolute;
+  top: 100px;
+  left: 160px;*/
+  width: 960px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mdInstagram-title {
+  width: 235px;
+  height: 30px;
+  margin-bottom: 40px;
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/title_instagram.png);
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  float:left;
+}
+.media-grid li {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+
+/* contact */
+.mdContact {
+  position: relative;
+  min-height: 750px;
+  background-color: #000;
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/bg_border.png);
+  overflow: hidden;
+  background-color: #191919;
+  background-attachment: fixed;
+}
+.mdContact-contents {
+  /*position: absolute;
+  top: 150px;
+  left: 160px;*/
+  width: 960px;
+  margin-top: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 60px;
+}
+.mdContact-title {
+  width: 147px;
+  height: 30px;
+  margin-bottom: 20px;
+ /* background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/title_contact.png);
+  background-repeat: no-repeat;
+  text-indent: -9999px;*/
+  float:left;
+  color: #fff;
+  font-size: 35px;
+}
+.mdContact-annotation{
+  color:#fff;
+  margin-bottom: 40px;
+  font-size: 14px;
+  font-family:'ƒqƒ‰ƒMƒmŠpƒS Pro W3','Hiragino Kaku Gothic Pro',sans-serif;
+  float:left;
+  clear:left;
+  margin-top:20px;
+}
+.mdContact-form {
+  margin-left: 70px;
+  margin-right: 70px;
+  clear: left;
+}
+.mdContact-form-name {
+  float: left;
+  width: 390px;
+}
+.mdContact-form-mail {
+  float: right;
+  width: 390px;
+}
+.mdContact-form-label {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #fff;
+}
+.mdContact-form-input {
+  margin-bottom: 30px;
+}
+.mdContact-form-input input,
+.mdContact-form-input textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #343434;
+  background-color: #252525;
+  color: #fff;
+}
+.mdContact-form-input textarea {
+  height: 170px;
+}
+.btn-send input {
+  display: block;
+  width: 185px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/btn_send.png);
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.btn-send:hover {
+  opacity:0.6;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-backtohome {
+
+}
+
+.btn-backtohome {
+    clear: both;
+    float: left;
+    height: 40px;
+    margin: 20px auto 40px;
+    width: 185px;
+}
+.btn-backtohome a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/btn_backtohome.png);
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+.btn-backtohome a:hover {
+  opacity:0.6;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  min-width: 960px;
+  background-color: #000;
+  font-size: 13px;
+  overflow: hidden;
+}
+.pageTop {
+  width: 30px;
+  height: 15px;
+  margin: 30px auto 45px;
+}
+.pageTop a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/arw_top.png);
+  text-indent: -9999px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;  
+}
+.pageTop a:hover {
+  opacity:0.6;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.footer-copy {
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+
+
+/* gallery */
+.mdgallery {
+    min-height: 900px;
+  background-color: #000;
+  background-image: url(../DSC_0101.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-position: right top;
+  background-attachment: fixed;
+}
+.mdgallery-inner {
+  position: relative;
+  width: 100%;
+  min-height: 800px;
+  background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/bg_border.png);
+  overflow: hidden;
+}
+
+.mdgallery-contents {
+  /*position: absolute;
+  top: 160px;
+  left: 140px;*/
+  width: 960px;
+  margin-top: 125px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mdgallery-detail {
+  /*position: absolute;
+  top: 160px;
+  left: 140px;*/
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mdgallery-title {
+  width: 140px;
+  height: 31px;
+  margin-bottom: 40px;
+  /*background-image: url(http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/title_gallery.png);
+  background-repeat: no-repeat;
+  text-indent: -9999px;*/
+  float:left;
+  color: #fff;
+  font-size: 35px;
+}
+
+
+.mdgallery-newsListWr {
+  margin-bottom: 20px;
+  float:left;
+  clear:left;
+}
+.mdgallery-newsListWr ul {
+  overflow: hidden;
+}
+.mdgallery-newsListWr li {
+  float: left;
+  width: 300px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+
+.mdgallery-newsList {
+  display: inline;
+  float: left;
+  width: 220px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.mdgallery-newsList-movie {
+  margin-bottom: 10px;
+}
+.mdgallery-newsList-link a {
+  color: #fff;
+  font-size: 12px;
+}
+
+.mdgallery-newsList a {
+    text-decoration: none;
+}
+
+.mdgallery-newsList a:hover {
+	opacity:0.6;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.mdgallery-newsList-title {
+    color: #FFFFFF;
+    float: left;
+    font-family:'ƒqƒ‰ƒMƒmŠpƒS Pro W3','Hiragino Kaku Gothic Pro',sans-serif;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-top: 5px;
+}
+
+.mdgallery-ttl {
+    color: #FFFFFF;
+    float: left;
+    margin-bottom: 10px;
+}
+
+
+.btn-BackToNews,
+.btn-BackToGallery {
+    float: left;
+    height: 40px;
+    width: 165px;
+    margin-bottom: 60px;
+}
+.btn-BackToNews a,
+.btn-BackToGallery a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  text-indent: -9999px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.btn-BackToNews a {
+  background-image: url("http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/btn_backtonews.png");
+}
+.btn-BackToGallery a {
+  background-image: url("http://cyril-takayama.com/wordpress/wp-content/themes/cyrill/img/btn_backtogallery.png");
+}
+.btn-BackToNews a:hover,
+.btn-BackToGallery a:hover {
+  opacity:0.6;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* slideshow */
+.slideShow.typeGallery{
+  min-height: 640px;
+  height: 100%;
+}
+.slideShow.typeGallery .slideShow-slide{
+  min-height: 640px;
+  background-size: contain;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat
+}
+.slideShow.typeGallery .slideShow-nav {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 310px;
+  left: 0;
+}
+.slideShow.typeGallery .slideShow-nav-prevBtn {
+  display: inline;
+  float: left;
+  width: 46px;
+  height: 46px;
+  background-image: url(./img/arw_prev_2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  -moz-background-size: contain;
+  -webkit-background-size: contain;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin-left: 10px;
+}
+.slideShow.typeGallery .slideShow-nav-prevBtn:hover {
+  opacity:0.6;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.slideShow.typeGallery .slideShow-nav-nextBtn {
+  display: inline;
+  float: right;
+  width: 46px;
+  height: 46px;
+  background-image: url(./img/arw_next_2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  -moz-background-size: contain;
+  -webkit-background-size: contain;
+  text-indent: -9999px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  margin-right: 10px;
+}
+.slideShow.typeGallery .slideShow-nav-nextBtn:hover {
+  opacity:0.6;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.slideShow.typeGallery .slideShow-nav-prevBtn.typeDisable {
+  opacity:0.3;
+}
+.slideShow.typeGallery .slideShow-nav-nextBtn.typeDisable {
+  opacity:0.3;
+}
+
+.libScrollTop2 {
+    float: left;
+}
+
+
+.article-text > p {
+    line-height: 1.8;
+}
+
+.article-text a {
+    color: #999999;
+}
+
+.article-text a:hover {
+    color: #ffffff;
+	text-decoration:none;
+}
+
+
+.mdCredits {
+    margin: 60px auto 30px;
+    width: 520px;
+}
+
+.mdCreditsTtl {
+    color: #FFFFFF;
+    float: left;
+    margin-right: 10px;
+	font-size:12px;
+}
+
+.mdCreditsName {
+    color: #FFFFFF;
+    font-size: 12px;
+    font-family:'ƒqƒ‰ƒMƒmŠpƒS Pro W3','Hiragino Kaku Gothic Pro',sans-serif;
+}
+
+.mdCreditsName a{
+	text-decoration:none;
+	color:#fff;
+	opacity:0.6;
+}
+
+.mdCreditsName a:hover{
+	opacity:1;
+	 -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 70%;
+}
+
+body {
+  font-size: 2rem;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #aebcb9;
+  background-color: #0d0d0d;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cd-title {
+  position: relative;
+  height: 160px;
+  line-height: 230px;
+  text-align: center;
+}
+.cd-title h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+@media only screen and (min-width: 768px) {
+  .cd-title {
+    line-height: 250px;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-title {
+    height: 200px;
+    line-height: 300px;
+  }
+  .cd-title h1 {
+    font-size: 3rem;
+  }
+}
+
+.cd-intro {
+  width: 90%;
+  max-width: 768px;
+  text-align: center;
+}
+
+.cd-intro {
+  margin: 4em auto;
+}
+@media only screen and (min-width: 768px) {
+  .cd-intro {
+    margin: 5em auto;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-intro {
+    margin: 6em auto;
+  }
+}
+
+.cd-headline {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+@media only screen and (min-width: 768px) {
+  .cd-headline {
+    font-size: 4.4rem;
+    font-weight: 300;
+  }
+}
+@media only screen and (min-width: 1170px) {
+  .cd-headline {
+    font-size: 6rem;
+  }
+}
+
+.cd-words-wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+.cd-words-wrapper b {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  top: 0;
+}
+.cd-words-wrapper b.is-visible {
+  position: relative;
+}
+.no-js .cd-words-wrapper b {
+  opacity: 0;
+}
+.no-js .cd-words-wrapper b.is-visible {
+  opacity: 1;
+}
+
+/* -------------------------------- 
+
+xrotate-1 
+
+-------------------------------- */
+.cd-headline.rotate-1 .cd-words-wrapper {
+  -webkit-perspective: 300px;
+  -moz-perspective: 300px;
+  perspective: 300px;
+}
+.cd-headline.rotate-1 b {
+  opacity: 0;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+.cd-headline.rotate-1 b.is-visible {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  -o-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-animation: cd-rotate-1-in 1.2s;
+  -moz-animation: cd-rotate-1-in 1.2s;
+  animation: cd-rotate-1-in 1.2s;
+}
+.cd-headline.rotate-1 b.is-hidden {
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  -webkit-animation: cd-rotate-1-out 1.2s;
+  -moz-animation: cd-rotate-1-out 1.2s;
+  animation: cd-rotate-1-out 1.2s;
+}
+
+@-webkit-keyframes cd-rotate-1-in {
+  0% {
+    -webkit-transform: rotateX(180deg);
+    opacity: 0;
+  }
+  35% {
+    -webkit-transform: rotateX(120deg);
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(360deg);
+    opacity: 1;
+  }
+}
+@-moz-keyframes cd-rotate-1-in {
+  0% {
+    -moz-transform: rotateX(180deg);
+    opacity: 0;
+  }
+  35% {
+    -moz-transform: rotateX(120deg);
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    -moz-transform: rotateX(360deg);
+    opacity: 1;
+  }
+}
+@keyframes cd-rotate-1-in {
+  0% {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+  35% {
+    -webkit-transform: rotateX(120deg);
+    -moz-transform: rotateX(120deg);
+    -ms-transform: rotateX(120deg);
+    -o-transform: rotateX(120deg);
+    transform: rotateX(120deg);
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(360deg);
+    -moz-transform: rotateX(360deg);
+    -ms-transform: rotateX(360deg);
+    -o-transform: rotateX(360deg);
+    transform: rotateX(360deg);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes cd-rotate-1-out {
+  0% {
+    -webkit-transform: rotateX(0deg);
+    opacity: 1;
+  }
+  35% {
+    -webkit-transform: rotateX(-40deg);
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(180deg);
+    opacity: 0;
+  }
+}
+@-moz-keyframes cd-rotate-1-out {
+  0% {
+    -moz-transform: rotateX(0deg);
+    opacity: 1;
+  }
+  35% {
+    -moz-transform: rotateX(-40deg);
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    -moz-transform: rotateX(180deg);
+    opacity: 0;
+  }
+}
+@keyframes cd-rotate-1-out {
+  0% {
+    -webkit-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -ms-transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  35% {
+    -webkit-transform: rotateX(-40deg);
+    -moz-transform: rotateX(-40deg);
+    -ms-transform: rotateX(-40deg);
+    -o-transform: rotateX(-40deg);
+    transform: rotateX(-40deg);
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(180deg);
+    -moz-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+    -o-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+}
+/* -------------------------------- 
+
+xtype 
+
+-------------------------------- */
+.cd-headline.type .cd-words-wrapper {
+  vertical-align: top;
+  overflow: hidden;
+}
+.cd-headline.type .cd-words-wrapper::after {
+  /* vertical bar */
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 90%;
+  width: 1px;
+  background-color: #aebcb9;
+}
+.cd-headline.type .cd-words-wrapper.waiting::after {
+  -webkit-animation: cd-pulse 1s infinite;
+  -moz-animation: cd-pulse 1s infinite;
+  animation: cd-pulse 1s infinite;
+}
+.cd-headline.type .cd-words-wrapper.selected {
+  background-color: #aebcb9;
+}
+.cd-headline.type .cd-words-wrapper.selected::after {
+  visibility: hidden;
+}
+.cd-headline.type .cd-words-wrapper.selected b {
+  color: #0d0d0d;
+}
+.cd-headline.type b {
+  visibility: hidden;
+}
+.cd-headline.type b.is-visible {
+  visibility: visible;
+}
+.cd-headline.type i {
+  position: absolute;
+  visibility: hidden;
+}
+.cd-headline.type i.in {
+  position: relative;
+  visibility: visible;
+}
+
+@-webkit-keyframes cd-pulse {
+  0% {
+    -webkit-transform: translateY(-50%) scale(1);
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-50%) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(-50%) scale(0);
+    opacity: 0;
+  }
+}
+@-moz-keyframes cd-pulse {
+  0% {
+    -moz-transform: translateY(-50%) scale(1);
+    opacity: 1;
+  }
+  40% {
+    -moz-transform: translateY(-50%) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -moz-transform: translateY(-50%) scale(0);
+    opacity: 0;
+  }
+}
+@keyframes cd-pulse {
+  0% {
+    -webkit-transform: translateY(-50%) scale(1);
+    -moz-transform: translateY(-50%) scale(1);
+    -ms-transform: translateY(-50%) scale(1);
+    -o-transform: translateY(-50%) scale(1);
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-50%) scale(0.9);
+    -moz-transform: translateY(-50%) scale(0.9);
+    -ms-transform: translateY(-50%) scale(0.9);
+    -o-transform: translateY(-50%) scale(0.9);
+    transform: translateY(-50%) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(-50%) scale(0);
+    -moz-transform: translateY(-50%) scale(0);
+    -ms-transform: translateY(-50%) scale(0);
+    -o-transform: translateY(-50%) scale(0);
+    transform: translateY(-50%) scale(0);
+    opacity: 0;
+  }
+}
+/* -------------------------------- 
+
+xrotate-2 
+
+-------------------------------- */
+.cd-headline.rotate-2 .cd-words-wrapper {
+  -webkit-perspective: 300px;
+  -moz-perspective: 300px;
+  perspective: 300px;
+}
+.cd-headline.rotate-2 i, .cd-headline.rotate-2 em {
+  display: inline-block;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.cd-headline.rotate-2 b {
+  opacity: 0;
+}
+.cd-headline.rotate-2 i {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(-20px) rotateX(90deg);
+  -moz-transform: translateZ(-20px) rotateX(90deg);
+  -ms-transform: translateZ(-20px) rotateX(90deg);
+  -o-transform: translateZ(-20px) rotateX(90deg);
+  transform: translateZ(-20px) rotateX(90deg);
+  opacity: 0;
+}
+.is-visible .cd-headline.rotate-2 i {
+  opacity: 1;
+}
+.cd-headline.rotate-2 i.in {
+  -webkit-animation: cd-rotate-2-in 0.4s forwards;
+  -moz-animation: cd-rotate-2-in 0.4s forwards;
+  animation: cd-rotate-2-in 0.4s forwards;
+}
+.cd-headline.rotate-2 i.out {
+  -webkit-animation: cd-rotate-2-out 0.4s forwards;
+  -moz-animation: cd-rotate-2-out 0.4s forwards;
+  animation: cd-rotate-2-out 0.4s forwards;
+}
+.cd-headline.rotate-2 em {
+  -webkit-transform: translateZ(20px);
+  -moz-transform: translateZ(20px);
+  -ms-transform: translateZ(20px);
+  -o-transform: translateZ(20px);
+  transform: translateZ(20px);
+}
+
+.no-csstransitions .cd-headline.rotate-2 i {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  -o-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  opacity: 0;
+}
+.no-csstransitions .cd-headline.rotate-2 i em {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+
+.no-csstransitions .cd-headline.rotate-2 .is-visible i {
+  opacity: 1;
+}
+
+@-webkit-keyframes cd-rotate-2-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateZ(-20px) rotateX(90deg);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateZ(-20px) rotateX(-10deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(-20px) rotateX(0deg);
+  }
+}
+@-moz-keyframes cd-rotate-2-in {
+  0% {
+    opacity: 0;
+    -moz-transform: translateZ(-20px) rotateX(90deg);
+  }
+  60% {
+    opacity: 1;
+    -moz-transform: translateZ(-20px) rotateX(-10deg);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateZ(-20px) rotateX(0deg);
+  }
+}
+@keyframes cd-rotate-2-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateZ(-20px) rotateX(90deg);
+    -moz-transform: translateZ(-20px) rotateX(90deg);
+    -ms-transform: translateZ(-20px) rotateX(90deg);
+    -o-transform: translateZ(-20px) rotateX(90deg);
+    transform: translateZ(-20px) rotateX(90deg);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateZ(-20px) rotateX(-10deg);
+    -moz-transform: translateZ(-20px) rotateX(-10deg);
+    -ms-transform: translateZ(-20px) rotateX(-10deg);
+    -o-transform: translateZ(-20px) rotateX(-10deg);
+    transform: translateZ(-20px) rotateX(-10deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(-20px) rotateX(0deg);
+    -moz-transform: translateZ(-20px) rotateX(0deg);
+    -ms-transform: translateZ(-20px) rotateX(0deg);
+    -o-transform: translateZ(-20px) rotateX(0deg);
+    transform: translateZ(-20px) rotateX(0deg);
+  }
+}
+@-webkit-keyframes cd-rotate-2-out {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateZ(-20px) rotateX(0);
+  }
+  60% {
+    opacity: 0;
+    -webkit-transform: translateZ(-20px) rotateX(-100deg);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateZ(-20px) rotateX(-90deg);
+  }
+}
+@-moz-keyframes cd-rotate-2-out {
+  0% {
+    opacity: 1;
+    -moz-transform: translateZ(-20px) rotateX(0);
+  }
+  60% {
+    opacity: 0;
+    -moz-transform: translateZ(-20px) rotateX(-100deg);
+  }
+  100% {
+    opacity: 0;
+    -moz-transform: translateZ(-20px) rotateX(-90deg);
+  }
+}
+@keyframes cd-rotate-2-out {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateZ(-20px) rotateX(0);
+    -moz-transform: translateZ(-20px) rotateX(0);
+    -ms-transform: translateZ(-20px) rotateX(0);
+    -o-transform: translateZ(-20px) rotateX(0);
+    transform: translateZ(-20px) rotateX(0);
+  }
+  60% {
+    opacity: 0;
+    -webkit-transform: translateZ(-20px) rotateX(-100deg);
+    -moz-transform: translateZ(-20px) rotateX(-100deg);
+    -ms-transform: translateZ(-20px) rotateX(-100deg);
+    -o-transform: translateZ(-20px) rotateX(-100deg);
+    transform: translateZ(-20px) rotateX(-100deg);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateZ(-20px) rotateX(-90deg);
+    -moz-transform: translateZ(-20px) rotateX(-90deg);
+    -ms-transform: translateZ(-20px) rotateX(-90deg);
+    -o-transform: translateZ(-20px) rotateX(-90deg);
+    transform: translateZ(-20px) rotateX(-90deg);
+  }
+}
+/* -------------------------------- 
+
+xloading-bar 
+
+-------------------------------- */
+.cd-headline.loading-bar span {
+  display: inline-block;
+  padding: .2em 0;
+}
+.cd-headline.loading-bar .cd-words-wrapper {
+  overflow: hidden;
+  vertical-align: top;
+}
+.cd-headline.loading-bar .cd-words-wrapper::after {
+  /* loading bar */
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: #0096a7;
+  z-index: 2;
+  -webkit-transition: width 0.3s -0.1s;
+  -moz-transition: width 0.3s -0.1s;
+  transition: width 0.3s -0.1s;
+}
+.cd-headline.loading-bar .cd-words-wrapper.is-loading::after {
+  width: 100%;
+  -webkit-transition: width 3s;
+  -moz-transition: width 3s;
+  transition: width 3s;
+}
+.cd-headline.loading-bar b {
+  top: .2em;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.cd-headline.loading-bar b.is-visible {
+  opacity: 1;
+  top: 0;
+}
+
+/* -------------------------------- 
+
+xslide 
+
+-------------------------------- */
+.cd-headline.slide span {
+  display: inline-block;
+  padding: .2em 0;
+}
+.cd-headline.slide .cd-words-wrapper {
+  overflow: hidden;
+  vertical-align: top;
+}
+.cd-headline.slide b {
+  opacity: 0;
+  top: .2em;
+}
+.cd-headline.slide b.is-visible {
+  top: 0;
+  opacity: 1;
+  -webkit-animation: slide-in 0.6s;
+  -moz-animation: slide-in 0.6s;
+  animation: slide-in 0.6s;
+}
+.cd-headline.slide b.is-hidden {
+  -webkit-animation: slide-out 0.6s;
+  -moz-animation: slide-out 0.6s;
+  animation: slide-out 0.6s;
+}
+
+@-webkit-keyframes slide-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes slide-in {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-100%);
+  }
+  60% {
+    opacity: 1;
+    -moz-transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(20%);
+    -moz-transform: translateY(20%);
+    -ms-transform: translateY(20%);
+    -o-transform: translateY(20%);
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes slide-out {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+  60% {
+    opacity: 0;
+    -webkit-transform: translateY(120%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+  }
+}
+@-moz-keyframes slide-out {
+  0% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+  60% {
+    opacity: 0;
+    -moz-transform: translateY(120%);
+  }
+  100% {
+    opacity: 0;
+    -moz-transform: translateY(100%);
+  }
+}
+@keyframes slide-out {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+  60% {
+    opacity: 0;
+    -webkit-transform: translateY(120%);
+    -moz-transform: translateY(120%);
+    -ms-transform: translateY(120%);
+    -o-transform: translateY(120%);
+    transform: translateY(120%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+/* -------------------------------- 
+
+xclip 
+
+-------------------------------- */
+.cd-headline.clip span {
+  display: inline-block;
+  padding: .2em 0;
+}
+.cd-headline.clip .cd-words-wrapper {
+  overflow: hidden;
+  vertical-align: top;
+}
+.cd-headline.clip .cd-words-wrapper::after {
+  /* line */
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background-color: #aebcb9;
+}
+.cd-headline.clip b {
+  opacity: 0;
+}
+.cd-headline.clip b.is-visible {
+  opacity: 1;
+}
+
+/* -------------------------------- 
+
+xzoom 
+
+-------------------------------- */
+.cd-headline.zoom .cd-words-wrapper {
+  -webkit-perspective: 300px;
+  -moz-perspective: 300px;
+  perspective: 300px;
+}
+.cd-headline.zoom b {
+  opacity: 0;
+}
+.cd-headline.zoom b.is-visible {
+  opacity: 1;
+  -webkit-animation: zoom-in 0.8s;
+  -moz-animation: zoom-in 0.8s;
+  animation: zoom-in 0.8s;
+}
+.cd-headline.zoom b.is-hidden {
+  -webkit-animation: zoom-out 0.8s;
+  -moz-animation: zoom-out 0.8s;
+  animation: zoom-out 0.8s;
+}
+
+@-webkit-keyframes zoom-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateZ(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+  }
+}
+@-moz-keyframes zoom-in {
+  0% {
+    opacity: 0;
+    -moz-transform: translateZ(100px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateZ(0);
+  }
+}
+@keyframes zoom-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateZ(100px);
+    -moz-transform: translateZ(100px);
+    -ms-transform: translateZ(100px);
+    -o-transform: translateZ(100px);
+    transform: translateZ(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+@-webkit-keyframes zoom-out {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateZ(-100px);
+  }
+}
+@-moz-keyframes zoom-out {
+  0% {
+    opacity: 1;
+    -moz-transform: translateZ(0);
+  }
+  100% {
+    opacity: 0;
+    -moz-transform: translateZ(-100px);
+  }
+}
+@keyframes zoom-out {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateZ(-100px);
+    -moz-transform: translateZ(-100px);
+    -ms-transform: translateZ(-100px);
+    -o-transform: translateZ(-100px);
+    transform: translateZ(-100px);
+  }
+}
+/* -------------------------------- 
+
+xrotate-3 
+
+-------------------------------- */
+.cd-headline.rotate-3 .cd-words-wrapper {
+  -webkit-perspective: 300px;
+  -moz-perspective: 300px;
+  perspective: 300px;
+}
+.cd-headline.rotate-3 b {
+  opacity: 0;
+}
+.cd-headline.rotate-3 i {
+  display: inline-block;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.is-visible .cd-headline.rotate-3 i {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.cd-headline.rotate-3 i.in {
+  -webkit-animation: cd-rotate-3-in 0.6s forwards;
+  -moz-animation: cd-rotate-3-in 0.6s forwards;
+  animation: cd-rotate-3-in 0.6s forwards;
+}
+.cd-headline.rotate-3 i.out {
+  -webkit-animation: cd-rotate-3-out 0.6s forwards;
+  -moz-animation: cd-rotate-3-out 0.6s forwards;
+  animation: cd-rotate-3-out 0.6s forwards;
+}
+
+.no-csstransitions .cd-headline.rotate-3 i {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  opacity: 0;
+}
+
+.no-csstransitions .cd-headline.rotate-3 .is-visible i {
+  opacity: 1;
+}
+
+@-webkit-keyframes cd-rotate-3-in {
+  0% {
+    -webkit-transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+  }
+}
+@-moz-keyframes cd-rotate-3-in {
+  0% {
+    -moz-transform: rotateY(180deg);
+  }
+  100% {
+    -moz-transform: rotateY(0deg);
+  }
+}
+@keyframes cd-rotate-3-in {
+  0% {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+}
+@-webkit-keyframes cd-rotate-3-out {
+  0% {
+    -webkit-transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(-180deg);
+  }
+}
+@-moz-keyframes cd-rotate-3-out {
+  0% {
+    -moz-transform: rotateY(0);
+  }
+  100% {
+    -moz-transform: rotateY(-180deg);
+  }
+}
+@keyframes cd-rotate-3-out {
+  0% {
+    -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -o-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+}
+/* -------------------------------- 
+
+xscale 
+
+-------------------------------- */
+.cd-headline.scale b {
+  opacity: 0;
+}
+.cd-headline.scale i {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+.is-visible .cd-headline.scale i {
+  opacity: 1;
+}
+.cd-headline.scale i.in {
+  -webkit-animation: scale-up 0.6s forwards;
+  -moz-animation: scale-up 0.6s forwards;
+  animation: scale-up 0.6s forwards;
+}
+.cd-headline.scale i.out {
+  -webkit-animation: scale-down 0.6s forwards;
+  -moz-animation: scale-down 0.6s forwards;
+  animation: scale-down 0.6s forwards;
+}
+
+.no-csstransitions .cd-headline.scale i {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  opacity: 0;
+}
+
+.no-csstransitions .cd-headline.scale .is-visible i {
+  opacity: 1;
+}
+
+@-webkit-keyframes scale-up {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    -webkit-transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+}
+@-moz-keyframes scale-up {
+  0% {
+    -moz-transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    -moz-transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    -moz-transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-up {
+  0% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes scale-down {
+  0% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: scale(0);
+    opacity: 0;
+  }
+}
+@-moz-keyframes scale-down {
+  0% {
+    -moz-transform: scale(1);
+    opacity: 1;
+  }
+  60% {
+    -moz-transform: scale(0);
+    opacity: 0;
+  }
+}
+@keyframes scale-down {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  60% {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+/* -------------------------------- 
+
+xpush 
+
+-------------------------------- */
+.cd-headline.push b {
+  opacity: 0;
+}
+.cd-headline.push b.is-visible {
+  opacity: 1;
+  -webkit-animation: push-in 0.6s;
+  -moz-animation: push-in 0.6s;
+  animation: push-in 0.6s;
+}
+.cd-headline.push b.is-hidden {
+  -webkit-animation: push-out 0.6s;
+  -moz-animation: push-out 0.6s;
+  animation: push-out 0.6s;
+}
+
+@-webkit-keyframes push-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+@-moz-keyframes push-in {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-100%);
+  }
+  60% {
+    opacity: 1;
+    -moz-transform: translateX(10%);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+}
+@keyframes push-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateX(10%);
+    -moz-transform: translateX(10%);
+    -ms-transform: translateX(10%);
+    -o-transform: translateX(10%);
+    transform: translateX(10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes push-out {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+  60% {
+    opacity: 0;
+    -webkit-transform: translateX(110%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+  }
+}
+@-moz-keyframes push-out {
+  0% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+  60% {
+    opacity: 0;
+    -moz-transform: translateX(110%);
+  }
+  100% {
+    opacity: 0;
+    -moz-transform: translateX(100%);
+  }
+}
+@keyframes push-out {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+  }
+  60% {
+    opacity: 0;
+    -webkit-transform: translateX(110%);
+    -moz-transform: translateX(110%);
+    -ms-transform: translateX(110%);
+    -o-transform: translateX(110%);
+    transform: translateX(110%);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}

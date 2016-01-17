@@ -1,0 +1,710 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0034)http://www.cyrilmagic.com/#wrapper -->
+<html xmlns="http://www.w3.org/1999/xhtml" pmbx_context="DE6D1ABE-7DE5-4822-9637-201C7488BC9E"><head>
+<link rel='shortcut icon' href='favicon .ico' type='image/x-icon'/ >
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" id="www-widgetapi-script" src="./CYRIL OFFICIAL WEBSITE_files/www-widgetapi.js" async=""></script>
+
+<title>About The developers</title>
+<meta name="keywords" content="cyril,magic,cyril-takayama,takayama,セロ,マジック,マジシャン">
+<meta name="description" content="マジシャン・セロ オフィシャルサイト">
+<link href="./CYRIL OFFICIAL WEBSITE_files/css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./CYRIL OFFICIAL WEBSITE_files/style.css" type="text/css" media="">
+<script async="" src="./CYRIL OFFICIAL WEBSITE_files/analytics.js"></script><script id="twitter-wjs" src="./CYRIL OFFICIAL WEBSITE_files/widgets.js"></script><script src="./CYRIL OFFICIAL WEBSITE_files/iframe_api"></script><script src="./CYRIL OFFICIAL WEBSITE_files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" src="./CYRIL OFFICIAL WEBSITE_files/jquery.min.js"></script>
+<link href="./CYRIL OFFICIAL WEBSITE_files/instagram.css" media="screen" rel="stylesheet" type="text/css">
+<script src="http://cdn.rawgithub.com/potomak/jquery-instagram/master/dist/instagram.min.js"></script>
+<script type="text/javascript" src="./CYRIL OFFICIAL WEBSITE_files/cyril.js"></script>
+<script type="text/javascript" src="./CYRIL OFFICIAL WEBSITE_files/inewsticker.js"></script>
+
+<link rel="stylesheet" href="./CYRIL OFFICIAL WEBSITE_files/jquery.loadprogress.css">
+<script type="text/javascript" src="./CYRIL OFFICIAL WEBSITE_files/jquery.loadprogress.js"></script>
+
+<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+  <link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+  <script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+<style>
+.subMenu{
+  position: fixed;
+  bottom: 0;
+}
+
+.mdMovie-box-top {
+    margin-top: 30px;
+    width: 960px;
+}
+.mdMovie-box {
+    float: left;
+    margin: 10px;
+}
+
+#twitter-widget-container {
+    float: left;
+}
+
+</style>
+<script type="text/javascript" src="./CYRIL OFFICIAL WEBSITE_files/widgets.js"></script>
+<script type="text/javascript" src="./CYRIL OFFICIAL WEBSITE_files/plusone.js" gapi_processed="true">
+  {lang: 'ja'}
+</script>
+<script type="text/javascript">
+$(window).load(function() {
+	function changeWidget() {
+		var twFrame = $('iframe.twitter-timeline');
+		if (twFrame.length > 0) {
+			twFrame.contents()
+			.find('h1').text(' CYRIL')
+			.end()
+			.find('head').append('<link href="http://www.cyrilmagic.com/wp-content/themes/cyril/twitter.css" rel="stylesheet" type="text/css" media="all" />');
+		} else {
+			setTimeout(changeWidget, 100);
+		}
+	}
+	changeWidget();
+});
+</script>
+<script>
+$(function(){
+
+if(typeof Utsukushiienohoukai === "undefined"){
+  Utsukushiienohoukai = {}
+};
+
+var U = Utsukushiienohoukai;
+
+U.SlideShow = function(options) {
+  this.options = options || {};
+  this.slideShow = this.options.slideShow;
+  this.slides = $(".slideShow-slide" , this.slideShow);
+  this.slideShowInner = $(".slideShow-inner" , this.slideShow);
+  this.prevBtn = $(".slideShow-nav .slideShow-nav-prevBtn" , this.slideShow);
+  this.nextBtn = $(".slideShow-nav .slideShow-nav-nextBtn" , this.slideShow);
+  this.slidesLength = this.slides.length;
+  this.slideWidth = $(this.slideShow).width();
+  this.slideShowInnerWidth = this.slideWidth * this.slideShowLength;
+  this.index = 1;
+  this.isClickable = true;
+  this.init()
+};
+
+U.SlideShow.prototype = {
+  init: function(){
+    var that = this;
+    this.slideShowInnerWidth = this.slideWidth * this.slidesLength;
+    $(this.prevBtn).addClass( "typeDisable" );
+    $(this.slideShowInner).css({
+      "width" : this.slideShowInnerWidth 
+    }); 
+    $(this.slides).css({
+      "width" : this.slideWidth
+    });
+    $(this.prevBtn).bind("click", function(e) {
+      e.stopPropagation();
+      if((that.isClickable == true) && (1 < that.index)){
+        that.prev()
+      }
+    });  
+    $(this.nextBtn).bind("click", function(e) {
+      e.stopPropagation();
+      if((that.isClickable == true) && (that.index < that.slidesLength)){
+        that.next()
+      }
+    });  
+    $(window).resize(function (e) {
+      e.stopPropagation();
+      that.resize()
+    })
+  },
+  resize: function(){
+    this.slideWidth = $(this.slideShow).width();
+    this.slideShowInnerWidth = this.slideWidth * this.slidesLength;
+    $(this.slideShowInner).css({
+      "width" : this.slideShowInnerWidth,
+      "margin-left" : "-"+ ((this.index-1) * this.slideWidth) + "px"
+    });
+    $(this.slides).css({
+      "width" : this.slideWidth
+    })
+  },
+  updateNavi: function(){
+    if((1 < this.index) || (this.index < this.slidesLength)) {
+      $(this.prevBtn).removeClass( "typeDisable" );
+      $(this.nextBtn).removeClass( "typeDisable" )
+    } 
+    if(this.index == 1){
+	  $(this.prevBtn).addClass( "typeDisable" )
+    } else if(this.index == this.slidesLength) {
+	  $(this.nextBtn).addClass( "typeDisable" )
+    } 
+  },
+    prev: function() { 
+    var that = this;
+    this.isClickable = false;
+    $(this.slideShowInner).animate(
+      {"margin-left": "+="+this.slideWidth+"px"}, 
+      {duration: 500,
+       complete: function(){
+         that.index = that.index - 1;  
+         that.isClickable = true;
+         that.updateNavi()
+       }
+      }
+    )
+  },
+  next: function() {
+    var that = this;
+    this.isClickable = false; 
+    $(this.slideShowInner).animate(
+      {"margin-left": "-="+this.slideWidth+"px"}, 
+      {duration: 500,
+       complete: function(){
+	     that.index = that.index + 1;
+	     that.isClickable = true;
+	     that.updateNavi()
+       }
+      }
+    )
+  }
+}
+
+U.MainVisualResize = function(options) {
+  this.options = options || {};
+  this.target = this.options.target;
+  this.target2 = this.options.target2;
+  //this.subMenu = this.options.subMenu;
+  this.init();
+};
+
+U.MainVisualResize.prototype = {
+  init: function(){
+    var that = this;
+    $(window).load(function (e) {
+      e.stopPropagation();
+      that.set()
+    });
+    $(window).resize(function (e) {
+      e.stopPropagation();
+      that.resize()
+    })
+  },
+  set: function(){
+    $(this.target).css({
+      "min-height" : $(window).innerHeight() + "px"
+    });
+    $(this.target2).css({
+      "min-height" : $(window).innerHeight() + "px"
+    })
+  },
+  resize: function(){
+    if($(window).innerWidth() > 960) {
+      $(this.target).css({
+        "min-height" : $(window).innerHeight() + "px"
+      });
+      $(this.target2).css({
+        "min-height" : $(window).innerHeight() + "px"
+      })
+    }
+  }
+};
+
+
+});
+
+$(function(){
+  var slideShow1 = new Utsukushiienohoukai.SlideShow({
+    slideShow : $("#slideShow1")
+  });
+});
+$(function(){
+  var slideShow1 = new Utsukushiienohoukai.SlideShow({
+    slideShow : $("#slideShow2")
+  });
+});
+
+$(function(){
+  var mainVisualResize = new Utsukushiienohoukai.MainVisualResize({
+    target: $(".mdTop"),
+    target2: $(".mdTop-inner"),
+    //subMenu: $(".subMenu") 
+  });
+});
+
+
+
+
+</script>
+
+<script type="text/javascript">
+$(function(){
+	$.loadprogress({
+		imgSelector:'img',//imageSelector
+		easing:'swing',//Fade out easing
+		duration:'1000',//Fade out duration
+		showText:true,//show % text
+		bodyOverflowFixTo:'auto' //false or css overflow value
+	});
+	$("#wrapper").css('display', 'block');
+});
+</script>
+
+<script type="text/javascript" charset="utf-8" async="" src="./CYRIL OFFICIAL WEBSITE_files/timeline.15ca66e7cea0d973c001aadc88ba3868.js"></script></head>
+<body style="overflow: auto;">
+<div id="wrapper" style="display: block;">
+
+  <div class="subMenu" style="position: absolute; top: 554px;">
+    <div class="gNavi clfix">
+      <div class="libScrollTop2"><a href="../Main/index.html"><span class="gNavi-logo"></span></a></div>
+    
+       <div class="gNavi-main">
+         <ul class="clfix">
+           <li class="gNavi-main-top"><a href="pexels-photo.jpg" id="">TOP</a></li>
+           <li class="libScrollTop"><a href="../Main/index.html" id="menu-news" class="active">MAIN</a></li>
+           <li class="libScrollTop"><a href="../home/index.html" id="menu-biography" class="">HOME</a></li>
+           <li class="libScrollTop"><a href="../Showcase/index.html" id="menu-movie" class="">SHOWCASE</a></li>
+           <li class="libScrollTop"><a href="../Events/index.html" class="">EVENTS</a></li>
+           <li class="libScrollTop"><a href="../guide/index.html" class="">GUIDE</a></li>
+           <li class="typeLast libScrollTop"><a href="../contact/index.html" id="menu-contact" class="">CONTACT</a></li>
+         </ul>
+       </div>
+       
+  
+       <div class="gNavi-share">
+         <ul class="clfix">
+           <a href="https://www.facebook.com/" target="_blank"><li class="gNavi-share-facebook">Facebook</li></a>
+           <a href="https://twitter.com/" target="_blank"><li class="gNavi-share-twitter">Twitter</li></a>
+           <a href="http://instagram.com/" target="_blank"><li class="gNavi-share-instagram">INSTAGRAM</li></a>
+           <a href="https://www.youtube.com/" target="_blank"><li class="gNavi-share-youtube typeLast">YOUTUBE</li></a>
+         </ul>
+       </div>
+     </div>
+  </div>
+  
+
+  <div id="contents">
+  <div id="top" class="mdTop top" style="min-height: 624px;">
+    <div class="mdTop-inner" style="min-height: 624px;">
+    <div class="cmnConWr">
+
+    </div>
+    </div>
+    
+    <div class="topBnr">
+    <ul>
+    <li><a href="" target="_blank"><img src="./CYRIL OFFICIAL WEBSITE_files/aaaa.png" style="position:fixed"></a></li>
+    </ul>
+    </div>
+    
+    
+<div class="mdTop-topics">
+<section class="cd-intro">
+    <h1 class="cd-headline rotate-1">
+      <span class="cd-words-wrapper">
+        <b class="is-visible">About</b>
+        <b>About</b>
+        <b>About</b>
+      </span>
+    </h1>
+  </section> <!-- cd-intro -->
+  <section class="cd-intro">
+    <h1 class="cd-headline letters type">
+      <span class="cd-words-wrapper waiting">
+        <b class="is-visible">&lt; the developers/&gt;</b>
+        <b>&lt; the developers/&gt;</b>
+        <b>&lt; the developers/&gt;</b>
+      </span>
+    </h1>
+  </section> <!-- cd-intro -->
+
+<span class="mdTop-topics-title"></span>
+<ul class="topTicker" style="direction: ltr; font-size: 13px; color: rgb(0, 0, 0); font-family: arial;">
+　　
+	
+
+</div>
+
+  </div><!-- /.mdTop -->
+ 
+ 
+<!-- NEWS -->   
+  
+    <div class="mdNews news" id="news">
+    <div class="mdNews-inner">
+    	<div >
+    		<h2 class="newst">KARAN</h2>
+        	<p class="newsti">This is Karan, Game Developer, </p>
+        	<p class="newsti">Lead Programmer StarLabz Inc.& Magician </p>
+
+    	</div>
+    </div>
+   		
+
+  </div><!-- /.mdNews -->  
+<!-- // NEWS -->
+ 
+  
+<!-- BIOGRAPHY -->  
+<div class="mdBiography biography" id="biography">
+    <div class="mdBiography-inner">
+
+      <div class="cmnConWr">
+      <div class="mdBiography-info">
+        <h2 class="mdBiography-title">LIBIN</h2>
+        <p class="mdb">This is Libin, Web Designer, Game Developer,</p>
+        <p class="mdb">Motion Graphics Designer & Magician</p>
+        
+  </div>
+  </div>
+  </div>
+  </div><!-- /.mdBiography -->  
+
+  
+  <!--<div class="mdBiography biography">
+    <div class="mdBiography-inner">
+      <div class="mdBiography-info">
+        <h2 class="mdBiography-title">BIOGRAPHY</h2>    
+        <p class="mdBiography-cyril-title">CYRIL　セロ</p>
+        <div class="mdBiography-text">
+          <p>アメリカ合衆国のロサンゼルス生まれのプロマジシャン（イリュージョニスト）。クロースアップ・マジックからステージマジックまで幅広いジャンルをこなす。2007年、マジシャン・オブ・ザ・イヤーを受賞した。<br>
+父親が日本人で母親がモロッコ系フランス人のハーフ。父親の出身地である沖縄県今帰仁村で、2歳から4歳まで祖母に育てられた。ロサンゼルスに戻った後も小学生時代は夏休みを祖母宅で過ごし、小学6年の時には日本の小学校に、わずか19日間だが通学していた。日本に滞在していた時期が長いことから日本語は堪能である。</p>
+        </div>
+        <p class="btn-next"><a href="">NEXT</a></p>
+      </div>
+    </div>
+  </div>--><!-- /.mdBiography --> 
+  
+  
+<!-- // BIOGRAPHY -->
+
+<!-- MOVIE -->  
+
+
+
+  
+    <div class="mdMovie movie" id="movie">
+    <div class="mdMovie-inner">    
+     
+        
+      
+    </div>
+  </div><!-- /.mdMovie -->
+  
+<!-- // MOVIE -->
+
+<!-- INSTAGRAM -->  
+   
+<div class="mdInstagram instagram" id="instagram">
+    
+  </div><!-- /.mdInstagram -->
+  
+<!-- // INSTAGRAM -->
+
+<!-- TWITTER -->
+
+<div class="mdTwitter twitter" id="twitter">
+    <div class="mdTwitter-inner">
+      <div class="mdTwitter-contents">
+        <h2 class="mdTwitter-title">TWITTER</h2>
+        <p class="btn-follow"><a href="https://twitter.com/" target="_blank">FOLLOW US</a></p>
+        
+        <div id="twitter-widget-container">
+          <div id="twitter-holder" class="clearfix">
+            <div id="twitter-widget">
+              <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="twitter-timeline twitter-timeline-rendered" style="position: static; visibility: visible; display: inline-block; width: 100%; height: 754px; padding: 0px; border: none; max-width: 520px; min-width: 180px; margin-top: 0px; margin-bottom: 0px;" data-widget-id="449513532329951232" data-user-id="59390389" title="Twitter Timeline"></iframe><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+              </div>
+          </div>
+        </div>         
+        
+      </div><!-- /.mdTwitter-contents -->
+    </div>
+  </div><!-- /.mdTwitter -->
+
+  
+<!-- // TWITTER -->
+
+<!-- GALLERY --> 
+
+  <div id="gallery" class="mdgallery gallery">
+    
+  </div><!-- /.mdTop -->
+ 
+
+<!-- // GALLERY -->
+
+
+<!-- CONTACT -->   
+
+
+  <div class="mdContact contact" id="contact">
+    <div class="mdContact-contents">
+      <h2 class="mdContact-title">CONTACT</h2>
+  
+      <div class="mdContact-form">
+       <div class="wpcf7" id="wpcf7-f73-o1">
+<div class="screen-reader-response"></div>
+<form action="" method="post" class="wpcf7-form" novalidate="novalidate" pmbx_context="8BD4AD15-F3CE-497F-A44F-3EF0C4814DC8">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="73" pmbx_context="9A68598A-95E0-40BA-A3DA-D67D740B68EA">
+<input type="hidden" name="_wpcf7_version" value="3.8" pmbx_context="C02D5296-7124-4FBA-B9C6-A4C25CFCA872">
+<input type="hidden" name="_wpcf7_locale" value="en_US" pmbx_context="13472ECD-3921-448B-AE76-13238C4CE30B">
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f73-o1" pmbx_context="6BE015D1-BD4D-4775-8EE0-F712B68E9A3D">
+<input type="hidden" name="_wpnonce" value="805699ca14" pmbx_context="622C7592-BF53-4966-AA30-28367E20DE9F">
+</div>
+<div class="clfix">
+<div class="mdContact-form-name">
+<div class="mdContact-form-label">NAME</div>
+<div class="mdContact-form-input"><span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" pmbx_context="9681981A-43D3-4A24-82B6-3C1981A3AA7E"></span> </div>
+<p></p></div>
+<div class="mdContact-form-mail">
+<div class="mdContact-form-label">EMAIL</div>
+<div class="mdContact-form-input"><span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" pmbx_context="9B7B2776-5C98-462F-BAA6-458FC487F177"></span></div>
+<p></p></div>
+<p></p></div>
+<div class="mdContact-form-name" style="width:820px;">
+<div class="mdContact-form-label">SUBJECT</div>
+<div class="mdContact-form-input"><span class="wpcf7-form-control-wrap your-subject"><input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" pmbx_context="B21091C7-384F-4C99-808D-7680FE7B7FC9"></span></div>
+<p></p></div>
+<div class="mdContact-form-message">
+<div class="mdContact-form-label">MESSAGE</div>
+<div class="mdContact-form-input"><span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span></div>
+<p></p></div>
+<p class="btn-send"><input type="submit" value="SEND" class="wpcf7-form-control wpcf7-submit" pmbx_context="E34108AA-F3E1-44ED-9825-E6F289DC095D"></p>
+<div class="wpcf7-response-output wpcf7-display-none"></div></form></div>      </div><!-- /.mdContact-form -->
+    </div><!-- /.mdContact-contents -->
+
+  </div><!-- /.mdContact -->
+  
+  
+
+
+  </div>
+  <!-- /#contents -->
+
+  <div class="footer">
+    <p class="pageTop libScrollTop"><a href="./CYRIL OFFICIAL WEBSITE_files/CYRIL OFFICIAL WEBSITE.html">paget top</a></p>
+    <address class="footer-copy">© 2015 StarlLabz Inc. All rights reserved.</address>
+  </div><!-- /#footer -->
+
+</div>
+<!-- /#wrapper -->
+
+<script>
+
+
+
+(function(){
+
+$(window).load(function()	{
+	$(".subMenu").css({
+      "position" : "absolute",
+	  "top" : ($(window).innerHeight() - 70) + "px"
+    });  
+});
+
+$(window).resize(function()	{
+	$(".subMenu").css({
+      "position" : "absolute",
+	  "top" : ($(window).innerHeight() - 70) + "px"
+    });  
+});
+
+$(window).scroll(function()	{
+  var scrollY = $(window).scrollTop();
+
+  
+
+  var bioOffset = $("#biography").offset();
+  var bioOffsetTop = bioOffset.top - 70;
+  
+  var newsOffset = $("#news").offset();
+  var newsOffsetTop = newsOffset.top - 70;
+
+  var movieOffset = $("#movie").offset();
+  var movieOffsetTop = movieOffset.top - 70;
+
+  var galleryOffset = $("#gallery").offset();
+  var galleryOffsetTop = galleryOffset.top - 70;
+  
+  var twitterOffset = $("#twitter").offset();
+  var twitterOffsetTop = twitterOffset.top - 70;
+  
+  var instagramOffset = $("#instagram").offset();
+  var instagramOffsetTop = instagramOffset.top - 70;
+  
+  var contactOffset = $("#contact").offset();
+  var contactOffsetTop = contactOffset.top - 70;
+  
+  if(scrollY >= newsOffsetTop) {
+	$(".subMenu").css({
+      "position" : "fixed",
+	  "top" : 0
+    });
+  };
+  
+   if(scrollY < newsOffsetTop) {
+	   	$(".subMenu").css({
+      "position" : "absolute",
+	  "top" : ($(window).innerHeight() - 70) + "px"
+    }); 
+	   
+   }
+
+  
+  if(scrollY >= newsOffsetTop && scrollY < bioOffsetTop){
+	$("#menu-news").addClass("active");   
+  } else {
+	$("#menu-news").removeClass("active"); 
+  };
+  
+  if(scrollY >= bioOffsetTop && scrollY < movieOffsetTop){
+  	$("#menu-biography").addClass("active");   
+  } else {
+	$("#menu-biography").removeClass("active"); 
+  };
+
+  if(scrollY >= movieOffsetTop && scrollY < instagramOffsetTop){
+  	$("#menu-movie").addClass("active");   
+  } else {
+	$("#menu-movie").removeClass("active"); 
+  };
+  
+  if(scrollY >= instagramOffsetTop && scrollY < twitterOffsetTop){
+	$("#menu-instagram").addClass("active");   
+  } else {
+	$("#menu-instagram").removeClass("active"); 
+  };
+
+
+  if(scrollY >= twitterOffsetTop && scrollY < galleryOffsetTop){
+	$("#menu-twitter").addClass("active");   
+  } else {
+	$("#menu-twitter").removeClass("active"); 
+  };
+
+  
+   if(scrollY >= galleryOffsetTop && scrollY < contactOffsetTop){
+	$("#menu-gallery").addClass("active");   
+  } else {
+	$("#menu-gallery").removeClass("active"); 
+  };
+  
+  
+
+  if(scrollY >= contactOffsetTop){
+	$("#menu-contact").addClass("active");   
+  } else {
+	$("#menu-contact").removeClass("active"); 
+  };
+  
+});
+
+Smooth = typeof Smooth === "undefined" ? {} : Smooth;
+Smooth.prm = typeof Smooth.prm === "undefined" ? {} : Smooth.prm;
+
+var S = Smooth.prm;
+
+
+var isApple = /i(Phone|P(o|a)d)/.test(navigator.userAgent);
+var isWebkit = typeof onwebkittransitionend === "object";
+
+S.scrollTop = function(target){
+    var _d = document;
+    var anchors = _d.querySelectorAll(target);
+    if(!anchors){return false;}
+   
+    function smoothScroll(a){
+        if(_d.getElementById(a.rel.replace(/.*\#/,""))){
+            var e = _d.getElementById(a.rel.replace(/.*\#/,""));
+        }else{
+            return;
+        }
+       
+        //Move point
+        var end=e.offsetTop;
+        var docHeight = _d.documentElement.scrollHeight;
+        var winHeight = window.innerHeight || _d.documentElement.clientHeight;
+        if(docHeight-winHeight<end){
+            var end = docHeight-winHeight;
+        }
+       
+        //Current Point
+        var start=window.pageYOffset || _d.documentElement.scrollTop || _d.body.scrollTop || 0;
+       
+        var flag=(end<start)?"up":"down";
+
+        function scrollMe(start,end,flag) {
+            setTimeout(
+                function(){
+                    if(flag=="up" && start >= end){
+                        start=start-(start-end)/10-1;
+                        window.scrollTo(0,start);
+                        scrollMe(start,end,flag);
+                    }else if(flag=="down" && start <= end){
+                        start=start+(end-start)/10+1;
+                        window.scrollTo(0,start);
+                        scrollMe(start,end,flag);
+                    }else{
+                        scrollTo(0,end);
+                    }
+                    return ;
+                }
+                ,10
+            );           
+        }
+
+        scrollMe(start,end,flag);
+    }
+
+    $(window).load(function(){
+        for (var i = 0 ,len=anchors.length; i<len ; i++) {
+                  if(anchors[i].href.replace(/\#[a-zA-Z0-9_]+/,"") == location.href.replace(/\#[a-zA-Z0-9_]+/,"")){
+                    anchors[i].rel = anchors[i].href;
+                    anchors[i].onclick=function(){
+                      smoothScroll(this);
+                    };
+                  };
+
+                };
+    });
+};
+S.scrollTop(".libScrollTop a");
+
+
+})();
+</script>
+
+<!-- Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51400275-1', 'cyrilmagic.com');
+  ga('require', 'displayfeatures');
+ga('send', 'pageview');
+
+</script>
+
+
+<!-- オプション -->
+<script type="text/javascript">
+$(document).ready(function() {
+    $('.topTicker').inewsticker({
+        speed : 5000,          // テキストの切替時間
+        effect : 'slide',       // エフェクト fade/slide/typing
+        dir : 'ltr',           // テキスト方向 ltr/rtl
+        font_size : 13,        // フォントサイズ
+        color : '#000',        // フォント色
+        font_family : 'arial', // フォント
+        delay_after : 1000     // (?)effectが'typing'の場合の切替時間
+    });
+});
+</script>
+
+
+
+<!-- WP Super Cache is installed but broken. The constant WPCACHEHOME must be set in the file wp-config.php and point at the WP Super Cache plugin directory. --></body></html>
