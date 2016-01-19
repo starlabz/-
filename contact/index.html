@@ -15,7 +15,11 @@ $("#form_wrap").addClass('hide');
 </script><![endif]-->
 
 <style>
-
+  <script>
+    var host = "starlabz.github.io";
+if ((host == window.location.host) && (window.location.protocol != "https:"))
+    window.location.protocol = "https";
+  </script>
 
 body, div, h1,h2, form, fieldset, input, textarea, footer,p {
 	margin: 0; padding: 0; border: 0; outline: none;
