@@ -262,17 +262,10 @@ alert(
   }
 		</script>
 		<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
-<script type="text/javascript" src="./HideMe - Free Web Proxy & Anonymous Surfing_files/swfobject.js"></script>
 <script language="Javascript">
- var userLang = navigator.language || navigator.userLanguage;
-if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
-if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
-if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
-if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
-    	document.write("Your IP address is: "+geoplugin_request());
-    	document.write("<br>Country: "+geoplugin_countryName()); 
-    	document.write("<br>City : "+geoplugin_city());
-    	document.write("<br>Currency : "+geoplugin_currencySymbol());
+    	document.write("<br>Country: ",geoplugin_countryName()); 
+    	document.write("<br>City : ",geoplugin_city());
+    	document.write("<br>Currency : ",geoplugin_currencySymbol());
     	document.write("<br>Currency code: "+geoplugin_currencyCode());
     	document.write("<br>Conntinent: "+geoplugin_continentCode());
 </script>
