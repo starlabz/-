@@ -5,7 +5,8 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>Starlabz Main</title>
 	<link rel="stylesheet" href="styles.css" />
-
+<script src="//j.maxmind.com/js/apis/geoip2/v2.0/geoip2.js"></script>
+<script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
 	<script src="jquery.min.js"></script>
 	<script src="parallax.js"></script>
 	<meta charset="UTF-8">
@@ -19,7 +20,8 @@
 
 	
 </head>
-
+  <script type="text/javascript" src="//js.maxmind.com/js/geoip.js">
+  </script>
   <script>
     var host = "starlabz.github.io";
 if ((host == window.location.host) && (window.location.protocol != "https:"))
@@ -242,7 +244,7 @@ alert(
 			</form>
 			</section>
 		</ul>
-		<div id="GeoAPI"></div>
+	
 		<p id="c2">Menu</p>
 <!--
 		<div style="line-height:16px;text-align:center;"><script type="text/javascript" src="https://s2.tracemyip.org/tracker/lgUrl.php?stlVar2=1413&amp;rgtype=4684NR-IPIB&amp;pidnVar2=76688&amp;prtVar2=17&amp;scvVar2=12"></script><noscript><a title="link tracker""><img src="" alt="link tracker" style="border:0px;"></a></noscript></div>
@@ -250,8 +252,7 @@ alert(
 		<br><br><br><br><br><br><br><br><br><br>
 		<iframe src="http://www.iptrackeronline.com/locate-ip-on-map-mini.php?lang=1" width="260" height="200" scrolling="no" marginheight="0" marginwidth="0" frameborder="0" name="iptrackeronline_gadget_mini"></iframe>
 		-->
-		<div id="lat"></div>
-		<div id="long" ></div>
+		
 		
 		<div id="ip">
 		<script >
@@ -261,6 +262,22 @@ alert(
   }
 		</script>
 		<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+<script type="text/javascript" src="./HideMe - Free Web Proxy & Anonymous Surfing_files/swfobject.js"></script>
+<script language="Javascript">
+ var userLang = navigator.language || navigator.userLanguage;
+if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows";
+if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS";
+if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX";
+if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux";
+    	document.write("Your IP address is: "+geoplugin_request());
+    	document.write("<br>Country: "+geoplugin_countryName()); 
+    	document.write("<br>City : "+geoplugin_city());
+    	document.write("<br>Currency : "+geoplugin_currencySymbol());
+    	document.write("<br>Currency code: "+geoplugin_currencyCode());
+    	document.write("<br>Conntinent: "+geoplugin_continentCode());
+</script>
+
+
 		</div>
 
 		<div class="cre">Credits
